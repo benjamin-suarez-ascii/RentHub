@@ -1,6 +1,31 @@
-body{
-    background-image: linear-gradient(to bottom, url('uct.jpg'), url('Campus_Norte.jpg'));
-    background-position: top center, top right;
-    background-size: auto, cover;
-    background-repeat: no-repeat
+/* Resetear algunos estilos por defecto del navegador */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de la barra superior */
+.barra-azul{
+    background-color: #048fd4;
+    padding: 17px;
+}
+/* Estilos de la barra blanca */
+.barra-blanca {
+    background-color: white;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-blanca img {
+    max-width: 270px;
+    padding: 20px 0;
+}
+
+/* Estilos de la sección con fondo */
+.fondo {
+    background-image: url('uct.jpg');
+    background-size: cover;
+    padding: 320px; 
 }
