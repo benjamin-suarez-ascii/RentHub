@@ -1,0 +1,6 @@
+body{
+    background-image: linear-gradient(to bottom, url('uct.jpg'), url('Campus_Norte.jpg'));
+    background-position: top center, top right;
+    background-size: auto, cover;
+    background-repeat: no-repeat
+}
