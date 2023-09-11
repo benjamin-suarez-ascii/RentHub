@@ -31,7 +31,7 @@ RentHUB podemos librar a los estudiantes de la preocupación constante a lo larg
 permitiéndoles concentrarse más en sus respectivos estudios y experiencias universitarias en
 general, infaltable decir que “**RentHub**” va garantiza un alojamiento cómodo y seguro.
 #
-# ÁMBITO DE PROGRAMACIÓN:
+# Herramientas de trabajo que serán utilizadas
 lenguaje de programación utilizado HTLM “**HyperTextMarkupLanguage**”, por que como
 grupo elegimos HTLM como lenguaje de programación para crear la página web,
 principalmente por su amplia compatibilidad con navegadores, y su buena familiarización
