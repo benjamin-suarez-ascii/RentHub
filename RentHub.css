@@ -25,7 +25,7 @@ body{
 
 /* Estilos de la sección con fondo */
 .fondo {
-    background-image: url('uct.jpg');
+    background-image: url('./Imágenes/uct.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 320px; 

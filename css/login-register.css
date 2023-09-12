@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 body{
-    background-image: url(../Imagenes/bg5.jpg);
+    background-image: url("../Imágenes/bg5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

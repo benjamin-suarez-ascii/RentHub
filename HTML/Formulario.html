@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href ="../Imágenes/UCT_logo.png">
+    <link rel="stylesheet" type="text/css" href="../CSS/Formulario.css">
+    <title>RentHub</title>
+</head>
+<body>
+    <header class="barra-azul">
+    </header>
+    
+    <div class="barra-blanca">
+        <img src="https://www.uct.cl/content/themes/meat-theme/dist/images/logo.svg">
+    </div>    
+    
+    <section class="fondo">
+        <div class="contact_form">
+            <div class="formulario">
+                <h1 class="h1">Contacto</h1>
+                <h3>Escríbenos y en breve te responderemos</h3>
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre">
+                    </p>
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email">
+                    </p>
+                    <p>
+                        <label for="telefono" class="colocar_telefono">Teléfono</label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </p>
+                    <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                    <p class="aviso">
+                        <span class="obligatorio"> *</span> Los campos son obligatorios.
+                    </p>
+            </div>
+        </div>
+    </section>    
+    
+
+</body>
+</html>
