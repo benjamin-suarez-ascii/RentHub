@@ -1,0 +1,149 @@
+/* Resetear algunos estilos por defecto del navegador */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de la barra superior */
+.barra-azul{
+    background-color: #048fd4;
+    padding: 17.5px;
+}
+/* Estilos de la barra blanca */
+.barra-blanca {
+    background-color: white;
+    padding: 0 2.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-blanca img {
+    width: 156px;
+    padding: 15px ;
+}
+
+/* Estilos de la sección con fondo */
+.fondo {
+    background-image: url('../Imágenes/uct.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 320px; 
+}
+/* Cajitas*/
+.container {
+    margin: 0 auto;
+    width: 90%;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .texto-centrado{
+        text-align: center;
+    }
+    .columna{
+        background:white;
+        color: #333;
+        border: 1px solid #333;
+        margin: 10px ;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px grey;
+        width: 23%;
+        box-sizing: border-box;
+    }
+    .precio{
+        font-size: large;
+        color: red;
+    }
+    .btn-contacto{
+        background: salmon;
+        display: block;
+        padding: 10px;
+        color: white;
+        border-radius: 2px;
+        margin-bottom: 5px;
+    }
+    .btn-precio:hover{
+        background: red;
+    }
+    img#arriendos{
+    height: 100px;
+    width: 100px;
+    }
+    
+    .logo img{
+    padding-right: 85%;
+    width: 75px;
+    height: 75px;
+    } 
+    
+    .margenfalso{
+    padding-left: 90px;
+    }
+    
+    .dropdown{
+    display:inline-block;
+    position: relative;
+    }
+    
+    .dropdown-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    }
+    
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    
+    .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    }
+    
+    .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+    }
+    
+    
+    p#colors{
+    color: black;    
+    }
+    
+    nav {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    }
+    
+    button {
+    background-color: #333;
+    color:white ;
+    border:none;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    }
+    nav ul li {
+    display: inline;
+    margin-right: 20px;
+    }
+    
+    nav a  {
+    text-decoration: none;
+    color: white;
+    }
+    
