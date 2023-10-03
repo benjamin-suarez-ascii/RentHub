@@ -2,72 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href ="../Imágenes/UCT_logo.png">
-    <link rel="stylesheet" type="text/css" href="../CSS/Formulario.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>RentHub</title>
+    <title>RENTHUB</title>
+    <link rel="icon" href="../Imágenes/uctLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Formulario.css">
 </head>
 <body>
-    <header class="barra-azul">
-    </header>
-    
-    <div class="barra-blanca">
-        <img src="https://www.uct.cl/content/themes/meat-theme/dist/images/logo.svg">
-    </div>    
-    
-    <section class="fondo">
-        <div class="contact_form">
-            <div class="formulario">
-                <h1 class="h1">Contacto</h1>
-                <h3>Escríbenos y en breve te responderemos</h3>
-                    <p>
-                        <label for="nombre" class="colocar_nombre">Nombre
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre">
-                    </p>
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email">
-                    </p>
-                    <p>
-                        <label for="telefono" class="colocar_telefono">Teléfono</label>
-                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                    </p>
-                    <p>
-                        <label for="mensaje" class="colocar_mensaje">Mensaje
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
-                    </p>
-                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-                    <p class="aviso">
-                        <span class="obligatorio"> *</span> Los campos son obligatorios.
-                    </p>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">RENTHUB</h2>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="arriendos.html">Arriendos</a></li>
+                        <li><a href="Formulario.html">Contacto</a></li>
+                        <li><a href="login-register.html">Login</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="social_media">
-                <h2>Aquí encontrarás otras formas de comunicarte con nosotros:</h2>
-            <div class="codetheworld-io">
-                <a href="https://www.linkedin.com" style="--color: #0072b1">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com" style="--color: #E1306C">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com" style="--color: #FF0050">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://www.facebook.com" style="--color: #4267B2">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+        </header>
+        <section>
+            <div class="contact_form">
+                <div class="formulario">
+                    <h1 class="h1">Contacto</h1>
+                    <h3>Escríbenos y en breve te responderemos</h3>
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre">
+                        </p>
+                        <p>
+                            <label for="email" class="colocar_email">Email
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email">
+                        </p>
+                        <p>
+                            <label for="telefono" class="colocar_telefono">Teléfono</label>
+                            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                        </p>
+                        <p>
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
+                        </p>
+                        <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                        <p class="aviso">
+                            <span class="obligatorio"> *</span> Los campos son obligatorios.
+                        </p>
+                    <div class="social_media">
+                        <h2>Aquí encontrarás otras formas de comunicarte con nosotros</h2>
+                    </div>  
             </div>
-
-        </div>
-
-    </section>    
-
+        </section>   
+        <video src="../Videos/video4.mp4" muted loop autoplay></video>
+        <ul class="social">
+            <li><a href="https://web.facebook.com/canaluctemuco/?_rdc=1&_rdr"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="https://twitter.com/uc_temuco"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/uctemuco/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>   
 </body>
 </html>

@@ -24,7 +24,7 @@ header .logo {
     cursor: pointer;
 }
 
-.containern1 {
+.container1 {
     background: transparent;
     display: flex;
     align-items: center;
@@ -179,6 +179,9 @@ nav ul li:hover::after {
 .container2{
     display:flex;
     margin:auto;
+    width: 98%;
+    z-index: 40;
+    justify-content: center;
 }   
 .item {
     background: white;
@@ -190,6 +193,7 @@ nav ul li:hover::after {
     box-shadow: 10px 10px 5px grey;
     width: 20%;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .precio {
@@ -198,7 +202,7 @@ nav ul li:hover::after {
 }
 
 .btn-contacto {
-    background: salmon;
+    background: green;
     display: block;
     padding: 10px;
     color: white;
