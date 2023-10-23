@@ -17,13 +17,13 @@ and contrasena='$contrasena'");
 if(mysqli_num_rows($validar_login) > 0){
     // sesion iniciada
     $_SESSION['usuario'] = $correo;
-    header("location: bienvenida.php");
+    header("location: ../HTML/Formulario.html");
     exit();
 }else{
     ?>
     <script>
         alert("Usuario ingresado no existe, por favor verifique los datos introducidos");
-        window.location = "login-register.php";
+        window.location = "../HTML/login-register.html";
     </script>
     <?php
     exit();

@@ -14,7 +14,7 @@ if(mysqli_num_rows($verificar_correo) > 0){
     ?>
     <script>
         alert("Este correo ya esta registrado, intenta con otro");
-        window.location = "login-register.html";
+        window.location = "../HTML/login-register.html";
     </script>
     <?php
     exit();
@@ -30,14 +30,14 @@ if ($ejecutar) {
     ?>
     <script>
         alert("El usuario se ha registrado correctamente");
-        window.location = "login-register.html";
+        window.location = "../HTML/login-register.html";
     </script>
     <?php
 } else {
     ?>
     <script>
         alert("Ups, algo ha ocurrido, intenta de nuevo");
-        window.location = "login-register.html";
+        window.location = "../HTML/login-register.html";
     </script>
     <?php
 }
