@@ -6,6 +6,27 @@ include_once('db.php');
 $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 
+// Verificar que los campos estan llenos
+if(empty($correo)){
+    ?>
+    <script>
+        alert("Por favor, rellene el campo correo.");
+        window.location = "../HTML/login-register.html";
+    </script>
+    <?php
+    exit();
+}
+
+if(empty($contrasena)){
+    ?>
+    <script>
+        alert("Por favor, rellene el campo contraseña.");
+        window.location = "../HTML/login-register.html";
+    </script>
+    <?php
+    exit();
+}
+
 // conectar con base de datos
 $conectar=conn();
 

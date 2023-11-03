@@ -4,6 +4,37 @@ $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 
+// Verificar que los campos esten llenos
+if(empty($nombre)){
+    ?>
+    <script>
+        alert("Por favor, rellene el campo nombre.");
+        window.location = "../HTML/login-register.html";
+    </script>
+    <?php
+    exit();
+}
+
+if(empty($correo)){
+    ?>
+    <script>
+        alert("Por favor, rellene el campo correo.");
+        window.location = "../HTML/login-register.html";
+    </script>
+    <?php
+    exit();
+}
+
+if(empty($contrasena)){
+    ?>
+    <script>
+        alert("Por favor, rellene el campo contraseña.");
+        window.location = "../HTML/login-register.html";
+    </script>
+    <?php
+    exit();
+}
+
 $conectar = conn();
 
 // Verificar que el correo no se repita y ya este inscrito
