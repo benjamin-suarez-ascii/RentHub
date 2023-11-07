@@ -176,12 +176,13 @@ nav ul li:hover::after {
 /*quienes somos*/
 .snap-center {
     scroll-snap-align: center;
+    z-index: 40;
 }
 .h-screen {
     height: 100vh;
 }
 .p-20 {
-    padding: 5rem;
+    padding: 6rem;
 }
 .flex {
     display: flex;
@@ -190,21 +191,24 @@ nav ul li:hover::after {
     flex-direction: row;
 }
 gap-10 {
-    gap: 2.5rem;
+    gap: 3.5rem;
 }
 .flex-col {
     flex-direction: column;
+    color: white;
 }
 .ml-10 {
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
 }
 .text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+    color: white;
 }
 .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    color: white;
 }
 .object-cover {
     object-fit: cover;
