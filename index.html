@@ -1,3 +1,10 @@
+<?php
+// inicia sesion
+    session_start();
+    if(isset($_SESSION['usuario'])){
+        header("location: ");
+    }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +39,7 @@
                 En nuestro sitio web especializado,
                 seguro, acogedor y perzonalizado
                 ¡vive la experiencia, bienvenido a tu lugar!.</p>
-            <a href="#">Explorar</a>
+            <a href="./HTML/login-register.html">Explorar</a>
         </div>
         <ul class="social">
             <li><a href="https://web.facebook.com/canaluctemuco/?_rdc=1&_rdr"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>

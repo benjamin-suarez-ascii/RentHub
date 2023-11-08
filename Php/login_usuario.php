@@ -38,7 +38,7 @@ and contrasena='$contrasena'");
 if(mysqli_num_rows($validar_login) > 0){
     // sesion iniciada
     $_SESSION['usuario'] = $correo;
-    header("location: ../HTML/Formulario.html");
+    header("location: ../index.html");
     exit();
 }else{
     ?>
