@@ -38,7 +38,7 @@ if(empty($contrasena)){
 $conectar = conn();
 
 // Verificar que el correo no se repita y ya este inscrito
-$verificar_correo = mysqli_query($conectar, "SELECT * FROM Usuario WHERE Correo='$correo'");
+$verificar_correo = mysqli_query($conectar, "SELECT * FROM users WHERE Correo='$correo'");
 
 // Si existe una fila con el mismo correo
 if(mysqli_num_rows($verificar_correo) > 0){
@@ -52,7 +52,7 @@ if(mysqli_num_rows($verificar_correo) > 0){
 }
 
 // Query para insertar el nuevo usuario en la base de datos
-$query = "INSERT INTO Usuario(Nombre, Correo, Contraseña) VALUES('$nombre', '$correo', '$contrasena')";
+$query = "INSERT INTO users(nombre, correo, contrasena) VALUES('$nombre', '$correo', '$contrasena')";
 
 // Ejecuta la query
 $ejecutar = mysqli_query($conectar, $query);
