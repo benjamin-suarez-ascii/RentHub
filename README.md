@@ -115,6 +115,16 @@ esto en pos de no quedarnos sin ideas para el termino de proyecto, asi que
 estamos perfeccionando todo lo basico para que mas adelante podamos 
 avanzar sin problemas con lo que esperamos lograr a futuro.
 
+#
+Tercer objetivo:Verificacion del inicio de sesion y mejoras esteticas a la pagina e implementacion de datos reales sobre los arriendos
+#
+En la primera semana de octubre, nuestro equipo se dividió en diferentes tareas para maximizar la eficiencia. Matías se enfocó en mejorar la sección de inicio de sesión, ya que nos estaba causando unos problemas en ese aspecto mientras que los otros miembros trabajaron en diversas cosas, tales como ayudar en el PHP porquye habian surgiddo unos problemas de la pagina en las que se superponian imagenes y el texto no debia estar donde debiera. 
+#
+En la segunda semana de octubre, continuamos con nuestro progreso. Matías perfeccionó aún más la sección de inicio de sesión, asegurando que las validaciones fueran sólidas y que la página fuera segura. Benjamín continuó mejorando la página principal, mientras que Fernando trabajó en la inclusión de fotos y detalles de arriendos reales en la página de arriendos. Patricio siguió buscando y validando arriendos reales, lo que es esencial para la autenticidad de nuestra plataforma. De este modo estabamos avanzando  con nuestras actividades establecidas, teniendo reuniones mucho mas breves ya que nos enfocabamos en solo hablar de los avances y las soluciones que teniamos en nuestro proyecto
+#
+En la tercera semana de octubre, nuestros esfuerzos se centraron en la estabilidad y seguridad de la plataforma. Matías continuó trabajando en la sección de inicio de sesión, asegurando que todas las validaciones estuvieran en su lugar. Benjamín refinó aún más el diseño de la página principal para que fuera visualmente atractiva. Fernando siguió trabajando en la página de arriendos, en resumen logramos solucionar todas las erratas que tenia la pagina, mientras que a la vez pudimos crear la pagina del login de forma que nos pareciera buena, validando el que uno este con la sesion iniciada o no y que esto se pueda ver en la misma pagina, patricio continuo buscando arriendos reales para validar que si estamos ofreciendo algo que se apega a la realidad.
+#
+en nuestra cuarta semana, contando la semana de receso que hubo en toda la universidad, nos propusimos a descansar y darnos un respiro del trabajo, ya funcionando todo, tema del login, del aspecto visual de la pagina y los arriendos verdaderos con fotos de estos mismos, tanto como datos de contacto con los arrendatarios y direcciones, tambien una nueva interfaz para el login fue implementada, con este mismo cambio nos propusimos a diseñar la forma en que la pagina muestre el login y que no desaparezca al cambiar de pestaña dentro de la misma, ahora funciona, cuando se inicia sesion, se ve perfil, y en cuando uno no esta con la sesion iniciada, cambia por el "login/register" correspondiente, arreglamos unos detalles y los ultimos retoques en vista de la entrega proxima.
 # Herramientas de trabajo que serán utilizadas
 lenguaje de programación utilizado HTLM “**HyperTextMarkupLanguage**”, por que como
 grupo elegimos HTLM como lenguaje de programación para crear la página web,
