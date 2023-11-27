@@ -1,78 +1,24 @@
 <?php
-include_once('db.php');
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
+session_start();
+include 'db.php';
 
-// Verificar que los campos esten llenos
-if(empty($nombre)){
-    ?>
-    <script>
-        alert("Por favor, rellene el campo nombre.");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-    exit();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre_usuario = $_POST["nombre_usuario"];
+    $email = $_POST["email"];
+    $contrasena = password_hash($_POST["contrasena"], PASSWORD_BCRYPT);
+
+    $consulta = "SELECT * FROM usuarios WHERE email = '$email'";
+    $resultado = $conexion->query($consulta);
+    if ($resultado->num_rows > 0) {
+        echo "El correo ya está registrado. Intente con otro.";
+    } else {
+        $insercion = "INSERT INTO usuarios (nombre_usuario, email, contrasena) VALUES ('$nombre_usuario', '$email', '$contrasena')";
+        if ($conexion->query($insercion) === TRUE) {
+            header("Location: ../HTML/login-register.html");
+            exit();
+        } else {
+            echo "Error en el registro: " . $conexion->error;
+        }
+    }
 }
-
-if(empty($correo)){
-    ?>
-    <script>
-        alert("Por favor, rellene el campo correo.");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-    exit();
-}
-
-if(empty($contrasena)){
-    ?>
-    <script>
-        alert("Por favor, rellene el campo contraseña.");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-    exit();
-}
-
-$conectar = conn();
-
-// Verificar que el correo no se repita y ya este inscrito
-$verificar_correo = mysqli_query($conectar, "SELECT * FROM users WHERE Correo='$correo'");
-
-// Si existe una fila con el mismo correo
-if(mysqli_num_rows($verificar_correo) > 0){
-    ?>
-    <script>
-        alert("Este correo ya esta registrado, intenta con otro");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-    exit();
-}
-
-// Query para insertar el nuevo usuario en la base de datos
-$query = "INSERT INTO users(nombre, correo, contrasena) VALUES('$nombre', '$correo', '$contrasena')";
-
-// Ejecuta la query
-$ejecutar = mysqli_query($conectar, $query);
-
-if ($ejecutar) {
-    ?>
-    <script>
-        alert("El usuario se ha registrado correctamente");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-} else {
-    ?>
-    <script>
-        alert("Ups, algo ha ocurrido, intenta de nuevo");
-        window.location = "../HTML/login-register.html";
-    </script>
-    <?php
-}
-
-// Cierra la conexion con la bd
-mysqli_close($conectar);
 ?>

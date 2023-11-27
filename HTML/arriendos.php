@@ -1,10 +1,3 @@
-<?php
-// inicia sesion
-    session_start();
-    if(isset($_SESSION['usuario'])){
-        header("location: ");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +15,11 @@
             <div class="container1">
                 <nav>
                     <ul>
-                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.php">Inicio</a></li>
                         <li><a href="arriendos.html">Arriendos</a></li>
                         <li><a href="Formulario.html">Contacto</a></li>
                         <li><a href="quienes_somos.html">Quienes Somos</a></li>
-                        <?php 
-            if(isset($_SESSION['usuario'])){
-                echo "<li><a href='#'>Perfil</a></li>
-                <li><button onclick=session_destroy()>Cerrar Sesion</button></li>";
-            }
-            else {
-                echo "<li><a href='login-register.html'>Login</a></li>";
-            }
-        ?>
+                        <li><a href='login-register.html'>Login</a></li>"
                     </ul>
                 </nav>
             </div>

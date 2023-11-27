@@ -1,12 +1,12 @@
 <?php
-// funcion el cual conecta con la base de datos utilizada y el servidor
-function conn(){
-$hostname = "db.inf.uct.cl";
-$usuariodb = "basuarez";
-$passworddb = "21376870";
-$dbname = "A2023_basuarez";
- //generando la conexion con el servidor
- $conectar = mysqli_connect($hostname,$usuariodb,$passworddb,$dbname);
- return $conectar;
+$servidor = "db.inf.uct.cl";
+$usuario = "basuarez";
+$contrasena = "21376870";
+$base_datos = "A2023_basuarez";
+
+$conexion = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+if ($conexion->connect_error) {
+    die("Error en la conexión: " . $conexion->connect_error);
 }
 ?>

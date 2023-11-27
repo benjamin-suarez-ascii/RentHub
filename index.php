@@ -1,10 +1,3 @@
-<?php
-// inicia sesion
-    session_start();
-    if(isset($_SESSION['usuario'])){
-        header("location: ");
-    }
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,11 +14,36 @@
             <div class="container">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.php">Inicio</a></li>
                         <li><a href="./HTML/arriendos.html">Arriendos</a></li>
                         <li><a href="./HTML/Formulario.html">Contacto</a></li>
                         <li><a href="./HTML/quienes_somos.html">Quienes Somos</a></li>
-                        <li><a href="./HTML/login-register.html">Login</a></li>
+                        <?php
+                        session_start();
+
+                        if (isset($_SESSION["usuario_conectado"]) && $_SESSION["usuario_conectado"] === TRUE) {
+                            $username = $_SESSION["usuario_nombre"];
+                            ?>
+
+                            <li style="text-align: center;">
+                                <a id="username-btn" href="#" onclick="toggleLogout()"> <?php echo $username; ?> </a>
+                                <ul id="logout-btn" style="display:none; width: 50px;">
+                                    <li style="text-align: left;"><a href="./Php/cerrar_sesion.php">Cerrar Sesión</a></li>
+                                </ul>
+                            </li>
+
+                            <script>
+                                function toggleLogout() {
+                                    var logoutBtn = document.getElementById('logout-btn');
+                                    logoutBtn.style.display = (logoutBtn.style.display === 'none') ? 'block' : 'none';
+                                }
+                            </script>
+
+                        <?php
+                        } else {
+                            echo '<li><a href="./HTML/login-register.html">Regístrate/Login</a></li>';
+                        }
+                        ?>
                     </ul>
                 </nav>
             </div>

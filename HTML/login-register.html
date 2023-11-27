@@ -1,10 +1,3 @@
-<?php
-// inicia sesion
-    session_start();
-    if(isset($_SESSION['usuario'])){
-        header("location: ");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,20 +26,17 @@
                     <button id="btn__registrarse">Registrarse</button>
                 </div>
             </div>
-            <!--Formulario de login y registro-->
             <div class="contenedor__login-register">
-                <!--Formulario de login-->
                 <form action="../Php/login_usuario.php" method="POST" class="formulario__login">
                     <h2>Iniciar Sesion</h2>
-                    <input type="email" placeholder="Correo Electronico" name="correo">
+                    <input type="email" placeholder="Correo Electronico" name="email">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <button>Entrar</button>
                 </form>
-                <!--registro-->
                 <form action="../Php/login-registro.php" method="POST"class="formulario__register">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre" name="nombre">
-                    <input type="email" placeholder="Correo Electronico" name="correo">
+                    <input type="text" placeholder="Nombre" name="nombre_usuario">
+                    <input type="email" placeholder="Correo Electronico" name="email">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <button>Registrarse</button>
                 </form>
