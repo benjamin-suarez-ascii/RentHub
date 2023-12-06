@@ -1,0 +1,108 @@
+<?php
+// inicia sesion
+    session_start();
+    if(isset($_SESSION['usuario'])){
+        header("location: ");
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENTHUB</title>
+    <link rel="icon" href="../Imágenes/uctLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Formulario.css">
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">RENTHUB</h2>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="../index.php">Inicio</a></li>
+                        <li><a href="arriendos.html">Arriendos</a></li>
+                        <li><a href="Formulario.html">Contacto</a></li>
+                        <li><a href="quienes_somos.html">Quienes Somos</a></li>
+                        <li><a href="login-register.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="contact_form">
+                <div class="formulario">
+                    <h1 class="h1">Publicar Arriendo</h1>
+                    <form action="../Php/subirArriendos.php" method="post" enctype="multipart/form-data">
+                        <p>
+                            <label for="tipo" class="colocar_nombre">Tipo de Propiedad
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="tipo" name="tipo" required placeholder="Escribe el tipo de propiedad">
+                        </p>
+                        <p>
+                            <label for="precio" class="colocar_nombre">Precio Mensual
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="precio" name="precio" required placeholder="Escribe el precio mensual">
+                        </p>
+                        <p>
+                            <label for="arrendatario" class="colocar_nombre">Nombre del Arrendatario
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="arrendatario" name="arrendatario" required placeholder="Escribe el nombre del arrendatario">
+                        </p>
+                        <p>
+                            <label for="direccion" class="colocar_nombre">Dirección
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="direccion" name="direccion" required placeholder="Escribe la dirección de la propiedad">
+                        </p>
+                        <p>
+                            <label for="contacto" class="colocar_nombre">Número de Contacto
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="contacto" name="contacto" required placeholder="Escribe el número de contacto del propietario">
+                        </p>
+                        <p>
+                            <label for="capacidad" class="colocar_nombre">Capacidad
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="capacidad" name="capacidad" required placeholder="Escribe la capacidad de la propiedad">
+                        </p>
+                        <p>
+                            <label for="sector" class="colocar_nombre">Sector
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="text" id="sector" name="sector" required placeholder="Escribe el sector donde se encuentra la propiedad">
+                        </p>
+                        <p>
+                            <label for="correo" class="colocar_nombre">Correo Electrónico</label>
+                            <input type="text" id="correo" name="correo" placeholder="Escribe el correo electrónico (opcional)">
+                        </p>
+                        <p>
+                            <label for="imagen" class="colocar_nombre">Imagen de la Propiedad
+                                <span class="obligatorio"></span>
+                            </label>
+                            <input type="file" id="imagen" name="imagen" required accept="image/png, image/jpeg, image/gif">
+                        </p>                        
+                        <input type="submit" value="Publicar Arriendo" name="submit">
+                        <p class="aviso">
+                            <span class="obligatorio"></span> Los campos son obligatorios.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>   
+        <video src="../Videos/video4.mp4" muted loop autoplay></video>
+        <ul class="social">
+            <li><a href="https://web.facebook.com/canaluctemuco/?_rdc=1&_rdr"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="https://twitter.com/uc_temuco"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/uctemuco/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>   
+</body>
+</html>
+
