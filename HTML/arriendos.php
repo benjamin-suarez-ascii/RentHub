@@ -19,116 +19,44 @@
                         <li><a href="arriendos.html">Arriendos</a></li>
                         <li><a href="Formulario.html">Contacto</a></li>
                         <li><a href="quienes_somos.html">Quienes Somos</a></li>
-                        <li><a href='login-register.html'>Login</a></li>"
+                        <li><a href="login-register.html">Login</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <section class="container2">
-            <div class="item">
-                <h2>Departamento</h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $160.000 mensual </p>
-                <p>arrendatario(a): Celia mondaca  </p>
-                <p> Dirección:sector cajon, cerca del cesfam a 10 minutos campus uct  </p>
-                <hr>
-                <p> Número de contacto: +56 9 6164 8598</p>
-                <p> Capacidad: 1 Persona </p>
-                <p> Sector Cajon </p>
-                <p> Correo:(no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-            
-            <div class="item">
-                <h2>Casa</h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $150.000 mensual </p>
-                <p>arrendatario(a): Sonia alvarez </p>
-                <p> Dirección:Pasaje juan rulfo 3581 </p>
-                <hr>
-                <p> Número de contacto: +56 9 8376 7653</p>
-                <p> Capacidad: 1 Persona </p>
-                <p> Sector Parque Alcántara </p>
-                <p> Correo:  </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-            
-            <div class="item">
-                <h2> Casa Estudiantil </h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $220.000 </p>
-                <p>arrendatario(a): Maria suarez </p>
-                <p>Dirección: Roni Bandini 3530 </p>
-                <hr>
-                <p> Número de contacto: +56 9 7158 5526</p>
-                <p> Capacidad: 2 Personas </p>
-                <p> Alcántara </p>
-                <p> Correo: (no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-
-            <div class="item">
-                <h2> Casa Estudiantil </h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $220.000 </p>
-                <p>arrendatario(a): Ana Sovarzo </p>
-                <p>Dirección: luis de gongora 3670 </p>
-                <hr>
-                <p> Número de contacto: +56 9 8229 3898</p>
-                <p> Capacidad: 1 Personas </p>
-                <p> Alcántara </p>
-                <p> Correo: (no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-
-            <div class="item">
-                <h2> pieza Estudiantil </h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $240.000 </p>
-                <p>arrendatario(a): Juan Sandoval </p>
-                <p>Dirección: luis de gongora 3640 </p>
-                <hr>
-                <p> Número de contacto: +56 9657 25107</p>
-                <p> Capacidad: 1 Personas </p>
-                <p> Alcántara </p>
-                <p> Correo: (no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-
-            <div class="item">
-                <h2> Pieza estudiantil </h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $130.000 </p>
-                <p>arrendatario(a): Juan Sandoval </p>
-                <p>Dirección: Caracas 03986 </p>
-                <hr>
-                <p> Número de contacto: +56 9 7774 7934</p>
-                <p> Capacidad: 1 Personas </p>
-                <p> Parque Alcántara </p>
-                <p> Correo: (no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
-
-            <div class="item">
-                <h2> Pieza estudiantil(baño compartido) </h2>
-                <img src="../Imágenes Arriendos/arriendo1.jpeg" id ="arriendos">
-                <p class="precio"> $130.000 </p>
-                <p>arrendatario(a): Emilia gomez </p>
-                <p>Dirección: Pasaje juan rulfo 3581 </p>
-                <hr>
-                <p> Número de contacto: +56 9 8376 7653</p>
-                <p> Capacidad: 1 Personas </p>
-                <p> Alcántara </p>
-                <p> Correo: (no especificado) </p>
-                <hr>
-                <a href="#" class="btn-contacto"> Contactar</a>
-            </div>
+        <?php
+        include "../Php/db.php"; 
+        $sql = "SELECT * FROM Publicaciones";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()) {
+                ?>
+                <div class='item'>
+                    <h2><?php echo $row["tipo"]; ?></h2>
+                    <img src='Imágenes Arriendos/<?php echo $row["imagen"]; ?>' id='arriendos'>
+                    <p class='precio'>$<?php echo $row["precio"]; ?> mensual</p>
+                    <p>Arrendatario(a): <?php echo $row["arrendatario"]; ?></p>
+                    <p>Dirección: <?php echo $row["direccion"]; ?></p>
+                    <hr>
+                    <p>Número de contacto: <?php echo $row["contacto"]; ?></p>
+                    <p>Capacidad: <?php echo $row["capacidad"]; ?> Personas</p>
+                    <p><?php echo $row["sector"]; ?></p>
+                    <p>Correo: <?php echo $row["correo"]; ?></p>
+                    <hr>
+                    <button onclick="window.open('https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($row["direccion"]); ?>', '_blank')">Ver Dirección en Mapa</button>
+                    <hr>
+                    <a href='#' class='btn-contacto'>Contactar</a>
+                </div>
+                <?php
+            }
+        } else {
+            echo "0 resultados";
+        }
+        
+        $conn->close();
+        ?>
 
         </section>
         <video src="../Videos/video4.mp4" muted loop autoplay></video>
